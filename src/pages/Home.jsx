@@ -16,7 +16,9 @@ export default function Home() {
     axios
       .get("https://dummyjson.com/products/categories")
       .then((response) => {
+         console.log(response)
         setCategories(response.data);
+       
       })
       .catch(() => {
         setCategories([]);
